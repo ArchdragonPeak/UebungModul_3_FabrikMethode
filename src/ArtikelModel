@@ -1,0 +1,5 @@
+public void schreibeArtikelInTxtDatei() throws IOException{
+    WriterCreator writerCreator = new ConcreteTxtWriterCreator();
+    WriterProduct writer = writerCreator.factoryMethod();
+    writer.schreibeArtikel(this.getAnzahlArtikel(), this.artikel);
+}
