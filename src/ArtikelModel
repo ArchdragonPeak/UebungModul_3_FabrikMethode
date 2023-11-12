@@ -3,3 +3,9 @@ public void schreibeArtikelInTxtDatei() throws IOException{
     WriterProduct writer = writerCreator.factoryMethod();
     writer.schreibeArtikel(this.getAnzahlArtikel(), this.artikel);
 }
+public void leseArtikelAusCsvDatei() throws IOException{
+    ReaderCreator readerCreator = new ConcreteCsvReaderCreator();
+    ReaderProduct reader = readerCreator.factoryMethod();
+    this.setAnzahlArtikel(reader.leseAnzahlArtikel());
+    this.artikel = reader.leseArtikel();
+}
